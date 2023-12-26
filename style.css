@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
+ 
+body{
+    font-family: 'Poppins', sans-serif ;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+} 
+
+/* ################################ Utility classes This is for whole page for ####################  */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin:auto ;
+}
+
+/* ####################  Navbar Styling ###################### */
+  
+
+/* For Desktop Mode */
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+
+/* styling on box-shadow navbar */
+.navbar{
+    box-shadow: 0px  5px  10px 0px #aaa ;
+    position:fixed;
+    width: 100%;
+    background: #fff;
+    color:#000;
+    opacity: 0.85;
+    z-index: 999;
+}
+
+
+/* ###########Styling navbar content like (logo and manu items) */
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.logo img{
+    order:1 ;
+    width:30%;
+    height: 50%;
+    /* font-size: 3rem; */
+}
+
+
+.navbar a{
+     color:#444 ;
+     text-decoration: none;
+     font-weight: 500;
+     transition: 0.5s color ease-in-out;
+}
+
+.menu-items a:hover{
+    color: #16a083;
+
+}
+/* ^^^^^^^^^^^^^^^^^^End Navigation^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* ############### showcase area ############### */
+
+/* This is only for adjeting showcase image  */
+.showcase-area{
+    height: 60vh;
+    background:url(./img/header-image2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+
+/* This is for adjesting and styling the showcase content */
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size:1.6rem ;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^Showcase area End ^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*###########This is for styling the button in showcase############## */
+.btn{
+    display: inline-block;
+    padding: 0.7em 2.5em ;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    margin-top: 0.8em;
+}
+
+.btn-primary{
+    color: #fff;
+    background: #16a083;
+}
+
+
+/* ############## About Us styling and adjusting #################*/
+  
+
+/* This for given padding from and given background color for about us */
+#about{
+    padding: 50px 0px ;
+    background:#f5f5f7;
+}
+
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* This is for given font size and text color */
+#about h2{
+       
+    font-size: 3.2rem;
+}
+
+#about P{
+    font-size: 1.6rem;
+    color: #555;
+}
+
+#about .small{
+    font-size: 1.7rem;
+    color: #666;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* This for ---------- */
+.about-img{
+     flex: 1 1 400px;
+     padding: 30px;
+} 
+
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* This Animation Styling */
+
+/* This is for img section */
+.about-img{
+    transform: translateX(150%);
+    animation: img-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* Thia is for text section */
+.about-text{
+    transform: translateX(-150%);
+    animation: img-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* This for adjusting about us img */
+.about-img img{
+      display: block;
+      height: 350px;
+      max-width:100%;
+      margin: auto;
+      object-fit: cover;
+      object-position:right;
+
+}
+ 
+/* ^^^^^^^^^^^^^^^^^^^^^^^^About-Us section end^^^^^^^^^^^^^^^^^ */
+
+/*==========Styling and adjusting Types of food   ============ */
+
+/* */
+#food h2{
+text-align: center;
+font-size: 3rem;
+font-weight: 400;
+margin-bottom: 30px;
+text-transform: uppercase;
+color: #555;
+margin-top: 15px;
+}
+
+.food-container{ 
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* this is only for img styling and adjusting */
+.food-container img{
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+    justify-content: space-between;
+    
+}
+
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+
+
+.img-content h3{
+      color: #fff;
+      font-size: 3rem;
+}
+.img-content a{
+    font-size: 1.2rem;
+    
+}
+
+/* This is for adjusting type of food (name) */
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 3;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+
+}
+
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
+
+/* this for overlays for type of food  */
+.img-container::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.871);
+    opacity:2;
+    z-index: 2;
+
+/* This is for transition on types of food */
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* This is for hover for type of food  */
+.img-container:hover::after{
+    opacity: 2;
+    transform: scaleY(1);
+}
+
+/* ^^^^^^^^^^^^^^Types of Food End^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* ##############Food Menu#################### */
+
+
+/* This is only for main heading (Food menu) */
+.food-menu-heading{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color:#666 ;
+    margin-top: 10rem;
+}
+
+
+/* This is for given flex for food menu item and food descriptiom */
+.food-menu-container{
+    display: flex;
+    flex-wrap:wrap;
+    padding: 50px 0px 30px 0px;
+    justify-content: center;
+    margin-right: 0.
+    /* text-align: center; */
+
+
+
+}
+
+/* This is only for food menu item  */
+.food-menu-item{
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+
+/* This is for food Image to adjusting and styling  */
+
+.food-menu-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+
+.food-description{
+    margin: auto 1.5rem;
+}
+
+.food-description .h1{
+    font-size:1.5rem;
+}
+
+h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: #444;
+}
+
+
+.food-price{
+    font-size: 1.4rem;
+    color: #117964;
+    font-weight: 700;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* This For testimonial(what customer say) */
+
+/* This is only for full page */
+#testimonial{
+    padding: 5rem 0rem;
+    background: rgb(243, 243, 243);
+}
+
+
+/* This is only for  */
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #555;
+}
+
+
+/* This is only for  given flex for all text image  */
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 3rem;
+}
+
+
+/* This is for styling star(rating section) */
+#testimonial .star-rating{
+    color: #ff9529;
+    justify-content: center;
+    margin-left: 14rem;
+
+    
+
+}
+
+
+#testimonial p{
+         margin: 3rem 0;
+         color: #444;
+         text-align: center;
+        
+}
+
+.testimonail-box{
+    text-align: center;
+    padding: 1rem;
+}
+
+/* This is for Styling Image */
+.customer-photo img{
+     display: block;
+     width: 150px;
+     height: 150px;
+     object-fit: cover;
+     object-position: center;
+     border-radius: 100%;
+     margin: auto;
+}
+
+.customer-name{
+    margin-top: 1rem;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* ==============This is for Contact for ========= */
+
+#contact{
+    padding: 5rem 0;
+    background:rgb(226,226,226); ;
+}
+
+
+.contact-container{
+    display:flex;
+    background:#fff;
+
+}
+
+.contact-image{
+    width: 50%;
+}
+
+
+.contact-image img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+
+}
+
+
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom:1rem ;
+    color: #444;
+    font-weight: 500;
+
+}
+
+
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+
+.food-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.form-container a{
+font-size: 1.2rem;
+
+
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+
+/* This is for footer section */
+.footer1{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    /* color: #fff; */
+    background: rgb(65,65,65);
+
+}
+
+.footer1 h2{
+    color: #fff;
+}
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* Making website responsive Using media quarry */
+
+
+
+
+
+
+/*++++++++++++This is For prectis only +++++++++++++++++*/
+/* .about-text{
+    width: 100%;
+}
+
+
+.about-img{
+    width:100% ;
+} */
+
+
+/* #food{
+    display: flex;
+    padding-top: 50px;
+    /* flex-direction: column; */
+    
+/* } */
+/* .img-container img{
+    display:block;
+    height: 350px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: space-between;
+
+
+/
+
+
+/* .food-menu-heading{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #555;
+    margin-top: 15px;
+
+}
+
+#food-menu img{
+    width: 350px;
+
+} */
+
+/* .testimonial-title{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+.customer-photo img{
+    width: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.star-rating span{
+    color: rgb(255, 136, 0);
+    font-size: 1.4rem;
+}
+ 
+
+#testimonial{
+    background: #f5f5f7;
+}
+
+.testimonial-container{
+    display:flex;
+    flex-wrap: wrap;
+} */
+/* ^^^^^^^^^^^^^^^^^for prectis only ^^^^^^^^^^^^^^^^^^^^^^^^^*/
